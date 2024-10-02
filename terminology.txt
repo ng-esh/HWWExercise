@@ -1,0 +1,47 @@
+## **Part One: Solidify Terminology**
+
+In your own terms, define the following terms:
+
+- What is HTTP?
+HyperText Transfer Protocol is essentially a set of rules that specifies how communication should work between a browser and a server 
+
+- What is a URL?
+Universal Resource Locators are addresses on the web, they are references to a resource that can be found on the internet
+
+-What is DNS?
+The Domain Name System, is like a phonebook for the web, its entire purpose being to take a specific hostname and translate it to a corresponding IP Address
+
+- What is a query string?
+The query string is a way of specifying additional info as part of your URL, that your server will respond to
+
+- What are two HTTP verbs and how are they different?
+The two http verbs are get and post.
+
+GET: used primarily when you are making request without "side effects", a request that will not leave any impact on the server, generally used for information retrieval or to get a webpage back. 
+
+POST: specifies a request where we do have "side effects", requests that usually have some payload that will typically modify data on the server in use.
+
+- What is an HTTP request?
+A request refers  to the inquiry made by a user from their browser to a server in order to retrieve a web page or another resource.
+
+- What is an HTTP response?
+A response the servers reply to the browser after the request, in which it replies with the requested resource or a response code
+
+
+- What is an HTTP header? Give a couple examples of request and response headers you have seen.
+
+When you send requests or receive responses they both contain headers, a request header might contain, what format we want the data in, what the date is or even what language we want the resource in. 
+User-Agent, Accept
+
+A response header might contain the content type, the response code, any caching or cookie info
+Content-Type, Set-Cookie
+
+- What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+Your browser first searches locally on the stored computer cache, then if not successful, its searches on the router and then ISP records, then it searches on DNS servers
+
+
+1. Your browser “resolves” the name into an IP address using DNS
+2. Your browser makes a request to that IP address, including headers (info about browser, any previous cookies, and other things)
+3. The server sends a response (typically, HTML, with a status code (200 if it was sucessful)
+4. The browser makes a DOM from that HTML, and finds any other resources needed (images, CSS, JavaScript, etc)
+5. The browser makes separate HTTP requests for those resources and receives response from the server for each
